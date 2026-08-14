@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
@@ -30,29 +31,73 @@
     <div class="container navContainer">
 
         <!-- LOGO -->
-        <div class="logo">
+        <a href="#hero" class="logo">
             <img src="assets/logos/logo.png" alt="Danistor Labs">
-        </div>
+        </a>
 
-        <!-- LINKS -->
+
+        <!-- LINKS DESKTOP -->
         <nav class="navLinks">
+
             <a href="#hero">Inicio</a>
+
             <a href="#services">Servicios</a>
+
             <a href="#portfolio">Portafolio</a>
+
             <a href="#about">Nosotros</a>
+
             <a href="#contact">Contacto</a>
+
         </nav>
 
-        <!-- CTA -->
-        <a href="https://wa.me/573152265525?text=Hola%20quiero%20información%20sobre%20una%20pagina%20web"
-           target="_blank"
-           class="button primaryButton navButton">
+
+        <!-- CTA DESKTOP -->
+        <a
+            href="https://wa.me/573152265525?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20una%20pagina%20web"
+            target="_blank"
+            class="button primaryButton navButton">
 
             Hablemos
 
         </a>
 
+
+        <!-- BOTÓN HAMBURGUESA -->
+        <button
+            class="mobileMenuButton"
+            id="mobileMenuButton"
+            aria-label="Abrir menú"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
     </div>
+
+
+    <!-- MENÚ MÓVIL -->
+<div class="mobileMenu" id="mobileMenu">
+
+    <a href="#hero">Inicio</a>
+    <a href="#services">Servicios</a>
+    <a href="#portfolio">Portafolio</a>
+    <a href="#about">Nosotros</a>
+    <a href="#contact">Contacto</a>
+
+    <a
+        href="https://wa.me/573152265525?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20una%20pagina%20web"
+        target="_blank"
+        class="mobileCTA">
+
+        Hablemos por WhatsApp
+
+    </a>
+
+</div>
 
 </header>
 
@@ -66,12 +111,12 @@
 
 
 <section class="hero" id="hero">
-  <div class="container heroContainer">
+<div class="container heroContainer">
 
     <!-- TEXTO -->
     <div class="heroText">
 
-        <span class="heroSmall">
+        <span id="heroSmall">
             DESARROLLO DIGITAL
         </span>
 
@@ -84,6 +129,7 @@
         </p>
 
         <div class="heroButtons">
+
             <a href="#portfolio" class="button primaryButton">
                 Ver proyectos
             </a>
@@ -91,37 +137,65 @@
             <a href="#contact" class="button secondaryButton">
                 Contáctanos
             </a>
+
         </div>
 
     </div>
+
 
     <!-- VISUAL -->
     <div class="heroVisual">
 
-        <div class="floatingCard bigCard">
-            <h3>GymPro</h3>
-            <p>Smart gym management platform.</p>
+        <!-- GYMPRO -->
+        <div class="card floatingCard bigCard">
+
+            <h3 class="cardTitle">
+                GymPro
+            </h3>
+
+            <p class="cardDescription">
+                Smart gym management platform.
+            </p>
+
         </div>
 
-        <div class="floatingCard socialCard">
-    <h3>ContentLab</h3>
-    <p>Creación de contenido y gestión de redes sociales.</p>
-</div>
 
-        <div class="floatingCard smallCard">
-            <h3>StatTap</h3>
-            <p>Track everything.</p>
+        <!-- STATTAP -->
+        <div class="card floatingCard smallCard">
+
+            <h3 class="cardTitle">
+                StatTap
+            </h3>
+
+            <p class="cardDescription">
+                Track everything.
+            </p>
+
+        </div>
+
+
+        <!-- CREACIÓN DE CONTENIDO -->
+        <div class="card floatingCard contentCard">
+
+            <h3 class="cardTitle">
+                Social Media
+            </h3>
+
+            <p class="cardDescription">
+                Content creation & digital branding.
+            </p>
+
         </div>
 
     </div>
 
-  </div>
+</div>
+
 </section>
 
-    </main>
 
 
-  <section class="services" id="services">
+<section class="services" id="services">
 
     <div class="container">
 
@@ -139,37 +213,96 @@
             soluciones modernas, rápidas y escalables.
         </p>
 
+
         <div class="servicesGrid">
 
-            <div class="serviceCard">
-                <div class="serviceIcon">📱</div>
-                <h3>Aplicaciones móviles</h3>
-                <p>Desarrollo de apps Android e iOS optimizadas para rendimiento y escalabilidad.</p>
-            </div>
+
+            <!-- APLICACIONES -->
 
             <div class="serviceCard">
-                <div class="serviceIcon">🌐</div>
-                <h3>Desarrollo web</h3>
-                <p>Sitios web modernos, rápidos y adaptados a cualquier dispositivo.</p>
+
+                <div class="serviceIcon">
+                    📱
+                </div>
+
+                <h3>
+                    Aplicaciones móviles
+                </h3>
+
+                <p>
+                    Desarrollo de apps Android e iOS optimizadas
+                    para rendimiento y escalabilidad.
+                </p>
+
             </div>
 
-            <div class="serviceCard">
-                <div class="serviceIcon">⚙️</div>
-                <h3>Software a medida</h3>
-                <p>Soluciones personalizadas para optimizar procesos y aumentar productividad.</p>
-            </div>
+
+            <!-- WEB -->
 
             <div class="serviceCard">
-                <div class="serviceIcon">📊</div>
-                <h3>Automatización</h3>
-                <p>Automatizamos tareas para reducir costos y mejorar eficiencia operativa.</p>
+
+                <div class="serviceIcon">
+                    🌐
+                </div>
+
+                <h3>
+                    Desarrollo web
+                </h3>
+
+                <p>
+                    Sitios web modernos, rápidos y adaptados
+                    a cualquier dispositivo.
+                </p>
+
             </div>
+
+
+            <!-- SOFTWARE -->
+
+            <div class="serviceCard">
+
+                <div class="serviceIcon">
+                    ⚙️
+                </div>
+
+                <h3>
+                    Software a medida
+                </h3>
+
+                <p>
+                    Soluciones personalizadas para optimizar
+                    procesos y aumentar productividad.
+                </p>
+
+            </div>
+
+
+            <!-- AUTOMATIZACIÓN -->
+
+            <div class="serviceCard">
+
+                <div class="serviceIcon">
+                    📊
+                </div>
+
+                <h3>
+                    Automatización
+                </h3>
+
+                <p>
+                    Automatizamos tareas para reducir costos
+                    y mejorar la eficiencia operativa.
+                </p>
+
+            </div>
+
 
         </div>
 
     </div>
 
 </section>
+
 
 <section class="portfolio" id="portfolio">
 
@@ -369,77 +502,134 @@
     <!-- SCRIPTS -->
     <!-- ========================= -->
 
-<script src="js/es.js"></script>
-
-<script src="js/en.js"></script>
 
 <script src="js/script.js"></script>
 
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
 
 <footer class="footer">
 
     <div class="container footerContainer">
 
-        <!-- LOGO + DESCRIPCIÓN -->
+
+        <!-- ========================= -->
+        <!-- BRAND -->
+        <!-- ========================= -->
+
         <div class="footerBrand">
 
-            <img src="assets/logos/logo.png" alt="Danistor Labs">
+            <a href="#hero" class="footerLogo">
+
+                <img
+                    src="assets/logos/logo.png"
+                    alt="Danistor Labs">
+
+            </a>
 
             <p>
-                Creamos soluciones digitales modernas para ayudar a
-                negocios a crecer, automatizar y destacar en el mundo digital.
+                Creamos soluciones digitales modernas para ayudar
+                a negocios a crecer, automatizar y destacar en el
+                mundo digital.
             </p>
 
         </div>
 
-        <!-- LINKS -->
+
+        <!-- ========================= -->
+        <!-- SECCIONES -->
+        <!-- ========================= -->
+
         <div class="footerLinks">
 
-            <h4>Secciones</h4>
+            <h4>
+                Secciones
+            </h4>
 
-            <a href="#apps">Apps</a>
-            <a href="#services">Servicios</a>
-            <a href="#portfolio">Portafolio</a>
-            <a href="#about">Nosotros</a>
-            <a href="#contact">Contacto</a>
+            <a href="#hero">
+                Inicio
+            </a>
+
+            <a href="#services">
+                Servicios
+            </a>
+
+            <a href="#portfolio">
+                Portafolio
+            </a>
+
+            <a href="#about">
+                Nosotros
+            </a>
+
+            <a href="#contact">
+                Contacto
+            </a>
 
         </div>
 
+
+        <!-- ========================= -->
         <!-- CONTACTO -->
+        <!-- ========================= -->
+
         <div class="footerContact">
 
-            <h4>Contacto</h4>
+            <h4>
+                Contacto
+            </h4>
 
-            <p>Bogotá, Colombia</p>
-            <p>danielserrano2398@gmail.com</p>
+            <a href="#contact">
+                Bogotá, Colombia
+            </a>
+
+            <a href="mailto:danielserrano2398@gmail.com">
+                danielserrano2398@gmail.com
+            </a>
 
         </div>
 
+
+        <!-- ========================= -->
         <!-- REDES -->
+        <!-- ========================= -->
+
         <div class="footerSocial">
 
-            <h4>Síguenos</h4>
+            <h4>
+                Síguenos
+            </h4>
 
-            <div class="socialIcons">
+            <div class="footerSocialIcons">
 
-                 <a href="https://wa.me/573152265525?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20una%20pagina%20web"
-       target="_blank"
-       class="socialBtn whatsapp"
-       data-name="Escríbeme">
+                <!-- WHATSAPP -->
 
-        <span class="onlineDot"></span>
+                <a
+                    href="https://wa.me/573152265525?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20una%20pagina%20web"
+                    target="_blank"
+                    aria-label="WhatsApp">
 
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                   <img
+    src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+    alt="WhatsApp">
 
-    </a>
-               <a href="https://www.instagram.com/danistorlabs/"
-       target="_blank"
-       class="socialBtn instagram"
-       data-name="Síguenos">
+                </a>
 
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
 
-    </a>
+                <!-- INSTAGRAM -->
+
+                <a
+                    href="https://www.instagram.com/danistorlabs/"
+                    target="_blank"
+                    aria-label="Instagram">
+
+                 <img
+    src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+    alt="Instagram">
+
+                </a>
 
             </div>
 
@@ -447,9 +637,21 @@
 
     </div>
 
-    <!-- BOTTOM -->
+
+    <!-- ========================= -->
+    <!-- FOOTER BOTTOM -->
+    <!-- ========================= -->
+
     <div class="footerBottom">
-        <p>© 2026 Danistor Labs. Todos los derechos reservados.</p>
+
+        <div class="container">
+
+            <p>
+                © 2026 Danistor Labs. Todos los derechos reservados.
+            </p>
+
+        </div>
+
     </div>
 
 </footer>

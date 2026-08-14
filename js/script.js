@@ -1,122 +1,136 @@
-// ==============================
-// LANGUAGE MANAGER
-// ==============================
+// =====================================================
+// DANISTOR LABS - MAIN SCRIPT
+// =====================================================
 
-let currentLanguage = "en";
 
-// ------------------------------
-// Cambiar idioma
-// ------------------------------
+// =====================================================
+// HERO - EFECTO PARALLAX EN LAS TARJETAS
+// =====================================================
 
-function setLanguage(language) {
-
-    currentLanguage = language;
-
-    localStorage.setItem("language", language);
-
-    const texts =
-        language === "es"
-            ? spanish
-            : english;
-
-    // Navbar
-
-    document.getElementById("navbarApps").textContent =
-        texts.navbarApps;
-
-    document.getElementById("navbarServices").textContent =
-        texts.navbarServices;
-
-    document.getElementById("navbarPortfolio").textContent =
-        texts.navbarPortfolio;
-
-    document.getElementById("navbarAbout").textContent =
-        texts.navbarAbout;
-
-    document.getElementById("navbarContact").textContent =
-        texts.navbarContact;
-
-    document.getElementById("letsTalk").textContent =
-        texts.letsTalk;
-
-    // Hero
-
-    document.getElementById("heroSmall").textContent =
-        texts.heroSmall;
-
-    document.getElementById("heroTitle").textContent =
-        texts.heroTitle;
-
-    document.getElementById("heroText").textContent =
-        texts.heroText;
-
-    document.getElementById("exploreApps").textContent =
-        texts.exploreApps;
-
-    document.getElementById("contactUs").textContent =
-        texts.contactUs;
-
-}
-
-// ==============================
-// BUTTON EVENTS
-// ==============================
-
-document
-    .getElementById("spanishButton")
-    .addEventListener("click", () => {
-
-        setLanguage("es");
-
-    });
-
-document
-    .getElementById("englishButton")
-    .addEventListener("click", () => {
-
-        setLanguage("en");
-
-    });
-
-    // ==============================
-// INITIAL LANGUAGE
-// ==============================
-
-const savedLanguage =
-    localStorage.getItem("language");
-
-if (savedLanguage) {
-
-    setLanguage(savedLanguage);
-
-} else {
-
-    const browserLanguage =
-        navigator.language;
-
-    if (browserLanguage.startsWith("es")) {
-
-        setLanguage("es");
-
-    } else {
-
-        setLanguage("en");
-
-    }
-
-}
-
-<script>
 const hero = document.querySelector(".hero");
 
-hero.addEventListener("mousemove", (e) => {
-    const x = (window.innerWidth / 2 - e.clientX) / 25;
-    const y = (window.innerHeight / 2 - e.clientY) / 25;
+if (hero) {
 
-    document.querySelector(".bigCard").style.transform =
-        `translate(${x}px, ${y}px)`;
+    const bigCard = document.querySelector(".bigCard");
+    const smallCard = document.querySelector(".smallCard");
+    const contentCard = document.querySelector(".contentCard");
 
-    document.querySelector(".smallCard").style.transform =
-        `translate(${x * 1.5}px, ${y * 1.5}px)`;
-});
-</script>
+
+    hero.addEventListener("mousemove", (e) => {
+
+        // En móviles no necesitamos este efecto
+        if (window.innerWidth <= 700) {
+            return;
+        }
+
+
+        const x =
+            (window.innerWidth / 2 - e.clientX) / 25;
+
+        const y =
+            (window.innerHeight / 2 - e.clientY) / 25;
+
+
+        // GymPro
+
+        if (bigCard) {
+
+            bigCard.style.transform =
+                `translate(${x}px, ${y}px)`;
+
+        }
+
+
+        // StatTap
+
+        if (smallCard) {
+
+            smallCard.style.transform =
+                `translate(${x * 1.5}px, ${y * 1.5}px)`;
+
+        }
+
+
+        // Social Media
+
+        if (contentCard) {
+
+            contentCard.style.transform =
+                `translate(${x * 0.8}px, ${y * 0.8}px)`;
+
+        }
+
+    });
+
+}
+
+
+// =====================================================
+// MOBILE MENU
+// =====================================================
+
+const mobileMenuButton =
+    document.getElementById("mobileMenuButton");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+
+if (mobileMenuButton && mobileMenu) {
+
+
+    // ---------------------------------------------
+    // ABRIR / CERRAR MENU
+    // ---------------------------------------------
+
+    mobileMenuButton.addEventListener("click", () => {
+
+        const isOpen =
+            mobileMenu.classList.toggle("active");
+
+
+        mobileMenuButton.classList.toggle(
+            "active",
+            isOpen
+        );
+
+
+        mobileMenuButton.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+    });
+
+
+    // ---------------------------------------------
+    // CERRAR AL SELECCIONAR UNA SECCION
+    // ---------------------------------------------
+
+    const mobileLinks =
+        mobileMenu.querySelectorAll("a");
+
+
+    mobileLinks.forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            mobileMenu.classList.remove("active");
+
+            mobileMenuButton.classList.remove("active");
+
+            mobileMenuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+}
+
+
+// =====================================================
+// FIN DEL SCRIPT
+// =====================================================

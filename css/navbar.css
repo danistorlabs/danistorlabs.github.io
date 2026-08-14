@@ -1,55 +1,170 @@
-/*============================*/
+/* ================================= */
 /* NAVBAR */
-/*============================*/
+/* ================================= */
 
-.navbar{
-    position: fixed;
+.navbar {
+    position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
 
-    background: rgba(10,15,30,0.6);
-    backdrop-filter: blur(10px);
-
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    margin: 0;
+    padding: 0;
 
     z-index: 1000;
+
+    background: rgba(8, 13, 25, 0.92);
+
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
-/* CONTENEDOR */
-.navContainer{
+
+.navContainer {
+    height: 80px;
+
+    width: min(1100px, 90%);
+
+    margin: 0 auto;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    height: 80px;
+    gap: 200px;
 }
 
-/* LOGO */
-.logo img{
-    height: 40px;
-}
-
-/* LINKS */
-.navLinks{
+.logo {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-.navLinks a{
+.logo img {
+    width: 58px;
+    height: auto;
+    display: block;
+}
+
+/* ================================= */
+/* LOGO */
+/* ================================= */
+
+.navLogo {
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.navLogo img {
+    width: 58px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* ================================= */
+/* DESKTOP LINKS */
+/* ================================= */
+
+.navLinks {
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+    margin-left: auto;
+}
+
+
+.navLinks a {
     color: var(--text-secondary);
+
     text-decoration: none;
-    font-size: 0.95rem;
 
-    transition: .3s;
+    font-size: .95rem;
+
+    font-weight: 500;
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
 }
 
-.navLinks a:hover{
+
+.navLinks a:hover {
     color: white;
+
+    transform: translateY(-1px);
 }
 
-/* BOTÓN */
-.navButton{
-    padding: 10px 22px;
-    font-size: 0.9rem;
+
+/* ================================= */
+/* DESKTOP CTA */
+/* ================================= */
+
+.navCTA {
+    flex-shrink: 0;
+
+    text-decoration: none;
 }
+
+
+/* ================================= */
+/* MOBILE BUTTON */
+/* ================================= */
+
+.mobileMenuButton {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+
+.mobileMenuButton span {
+    width: 24px;
+    height: 2px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
+}
+
+
+/* ================================= */
+/* MOBILE MENU */
+/* ================================= */
+
+.mobileMenu {
+    display: none;
+}
+
+
