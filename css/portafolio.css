@@ -1,0 +1,126 @@
+/*============================*/
+/* PORTFOLIO */
+/*============================*/
+
+.portfolioGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+/* Card */
+
+.portfolioCard{
+    backdrop-filter: blur(10px);
+    position: relative;
+    border-radius: 20px;
+    padding: 40px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.08);
+    overflow: hidden;
+    transition: all .35s ease;
+}
+
+/* Glow effect */
+
+.portfolioCard::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(110,168,254,0.25), transparent 60%);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.portfolioCard:hover::before{
+    opacity: 1;
+}
+
+/* Hover */
+
+.portfolioCard:hover{
+    transform: translateY(-10px);
+    border-color: rgba(110,168,254,0.4);
+}
+
+/* Content */
+
+.portfolioContent {
+    position: relative;
+    z-index: 2;
+}
+
+
+.portfolioContent h3{
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.portfolioContent p{
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.portfolioContent a:hover{
+    transform: translateY(-2px);
+}
+
+/* Tags */
+
+.portfolioTags{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.portfolioTags span{
+    background: rgba(110,168,254,0.1);
+    border: 1px solid rgba(110,168,254,0.3);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: .8rem;
+}
+
+/* Mockup container */
+
+.portfolioMockup {
+    position: relative;
+    z-index: 1;
+}
+
+
+.portfolioMockup{
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Imagen */
+
+.portfolioMockup img{
+    max-height: 100%;
+    border-radius: 12px;
+    transition: transform .4s ease;
+}
+
+/* Hover animación */
+
+.portfolioCard:hover .portfolioMockup img{
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.portfolioMockup::after{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(110,168,254,0.25);
+    filter: blur(100px);
+    z-index: -1;
+}

@@ -1,0 +1,44 @@
+/*============================*/
+/* ABOUT */
+/*============================*/
+
+.about{
+    padding: var(--section-spacing) 0;
+}
+
+.aboutContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.aboutStats{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+
+.statCard{
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: .3s;
+}
+
+.statCard:hover{
+    transform: translateY(-8px);
+    border-color: var(--primary);
+}
+
+.statCard h3{
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.statCard p{
+    color: var(--text-secondary);
+}

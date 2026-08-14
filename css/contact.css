@@ -1,0 +1,122 @@
+/* ============================ */
+/* CONTACT */
+/* ============================ */
+
+.contactContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.contactInfo {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+/* TÍTULO */
+
+.contactInfo .sectionTitle {
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+/* DESCRIPCIÓN */
+
+.contactInfo .sectionDescription {
+    max-width: 650px;
+    margin-bottom: 0;
+}
+
+/* DATOS */
+
+.contactDetails {
+    margin-top: 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 16px;
+}
+
+/* CADA DATO */
+
+.contactItem {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    color: var(--text-secondary);
+
+    font-size: 1rem;
+
+    transition: .3s ease;
+}
+
+.contactItem:hover {
+    color: var(--text);
+    transform: translateX(4px);
+}
+
+/* ICONOS */
+
+.contactItem span {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(79, 140, 255, .10);
+
+    font-size: 1rem;
+}
+
+/* BOTÓN */
+
+.contactForm {
+    margin-top: 35px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.contactForm a {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 30px;
+
+    font-weight: 700;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(79, 140, 255, .25);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.contactForm a:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 40px rgba(79, 140, 255, .35);
+}

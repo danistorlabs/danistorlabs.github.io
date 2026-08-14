@@ -1,0 +1,55 @@
+/*============================*/
+/* NAVBAR */
+/*============================*/
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background: rgba(10,15,30,0.6);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+
+    z-index: 1000;
+}
+
+/* CONTENEDOR */
+.navContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 80px;
+}
+
+/* LOGO */
+.logo img{
+    height: 40px;
+}
+
+/* LINKS */
+.navLinks{
+    display: flex;
+    gap: 30px;
+}
+
+.navLinks a{
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+
+    transition: .3s;
+}
+
+.navLinks a:hover{
+    color: white;
+}
+
+/* BOTÓN */
+.navButton{
+    padding: 10px 22px;
+    font-size: 0.9rem;
+}

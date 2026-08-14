@@ -1,33 +1,486 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Danistor Labs</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+
 </head>
 
 <body>
 
-<section class="hero">
+<header class="navbar">
 
-    <h1>Danistor Labs</h1>
+    <div class="container navContainer">
 
-    <p>
-        Building innovative mobile applications and software solutions.
-    </p>
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="assets/logos/logo.png" alt="Danistor Labs">
+        </div>
 
-    <div class="buttons">
+        <!-- LINKS -->
+        <nav class="navLinks">
+            <a href="#hero">Inicio</a>
+            <a href="#services">Servicios</a>
+            <a href="#portfolio">Portafolio</a>
+            <a href="#about">Nosotros</a>
+            <a href="#contact">Contacto</a>
+        </nav>
 
-        <button>Explore Apps</button>
+        <!-- CTA -->
+        <a href="https://wa.me/573152265525?text=Hola%20quiero%20información%20sobre%20una%20pagina%20web"
+           target="_blank"
+           class="button primaryButton navButton">
 
-        <button>Contact</button>
+            Hablemos
+
+        </a>
+
+    </div>
+
+</header>
+
+
+    <main>
+
+
+            <!-- ========================= -->
+    <!-- HERO -->
+    <!-- ========================= -->
+
+
+<section class="hero" id="hero">
+  <div class="container heroContainer">
+
+    <!-- TEXTO -->
+    <div class="heroText">
+
+        <span class="heroSmall">
+            DESARROLLO DIGITAL
+        </span>
+
+        <h1 class="heroTitle">
+            Creamos aplicaciones y software para hacer crecer tu negocio.
+        </h1>
+
+        <p class="heroDescription">
+            Creamos soluciones modernas, rápidas y escalables enfocadas en resultados reales.
+        </p>
+
+        <div class="heroButtons">
+            <a href="#portfolio" class="button primaryButton">
+                Ver proyectos
+            </a>
+
+            <a href="#contact" class="button secondaryButton">
+                Contáctanos
+            </a>
+        </div>
+
+    </div>
+
+    <!-- VISUAL -->
+    <div class="heroVisual">
+
+        <div class="floatingCard bigCard">
+            <h3>GymPro</h3>
+            <p>Smart gym management platform.</p>
+        </div>
+
+        <div class="floatingCard socialCard">
+    <h3>ContentLab</h3>
+    <p>Creación de contenido y gestión de redes sociales.</p>
+</div>
+
+        <div class="floatingCard smallCard">
+            <h3>StatTap</h3>
+            <p>Track everything.</p>
+        </div>
+
+    </div>
+
+  </div>
+</section>
+
+    </main>
+
+
+  <section class="services" id="services">
+
+    <div class="container">
+
+        <span class="sectionSubtitle">
+            NUESTROS SERVICIOS
+        </span>
+
+        <h2 class="sectionTitle">
+            Tecnología diseñada para hacer crecer tu negocio.
+        </h2>
+
+        <p class="sectionDescription">
+            Desarrollamos aplicaciones móviles, sitios web y software
+            personalizado para ayudar a las empresas a crecer mediante
+            soluciones modernas, rápidas y escalables.
+        </p>
+
+        <div class="servicesGrid">
+
+            <div class="serviceCard">
+                <div class="serviceIcon">📱</div>
+                <h3>Aplicaciones móviles</h3>
+                <p>Desarrollo de apps Android e iOS optimizadas para rendimiento y escalabilidad.</p>
+            </div>
+
+            <div class="serviceCard">
+                <div class="serviceIcon">🌐</div>
+                <h3>Desarrollo web</h3>
+                <p>Sitios web modernos, rápidos y adaptados a cualquier dispositivo.</p>
+            </div>
+
+            <div class="serviceCard">
+                <div class="serviceIcon">⚙️</div>
+                <h3>Software a medida</h3>
+                <p>Soluciones personalizadas para optimizar procesos y aumentar productividad.</p>
+            </div>
+
+            <div class="serviceCard">
+                <div class="serviceIcon">📊</div>
+                <h3>Automatización</h3>
+                <p>Automatizamos tareas para reducir costos y mejorar eficiencia operativa.</p>
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
-<script src="script.js"></script>
+<section class="portfolio" id="portfolio">
+
+    <div class="container">
+
+        <span class="sectionSubtitle">
+            NUESTROS PROYECTOS
+        </span>
+
+        <h2 class="sectionTitle">
+            Productos reales, soluciones reales.
+        </h2>
+
+        <p class="sectionDescription">
+            Estas son algunas de las soluciones que hemos desarrollado para resolver
+            problemas reales con tecnología moderna.
+        </p>
+
+        <div class="portfolioGrid">
+
+            <!-- GymPro -->
+           <div class="portfolioCard">
+
+    <div class="portfolioMockup">
+        <img src="assets/images/gympro.png" alt="GymPro App">
+    </div>
+
+    <div class="portfolioContent">
+        <h3>GymPro</h3>
+
+        <p>
+            Plataforma inteligente para la gestión de gimnasios, rutinas
+            personalizadas y control de usuarios.
+        </p>
+
+        <div class="portfolioTags">
+            <span>Flutter</span>
+            <span>Firebase</span>
+            <span>Mobile App</span>
+        </div>
+
+        <button class="button primaryButton">
+            Ver proyecto
+        </button>
+    </div>
+
+</div>
+
+<!-- StatTap -->
+<div class="portfolioCard">
+
+    <div class="portfolioMockup">
+        <img src="assets/images/stattap.png" alt="StatTap App">
+    </div>
+
+    <div class="portfolioContent">
+        <h3>StatTap</h3>
+
+        <p>
+            Aplicación para seguimiento de hábitos y métricas personales
+            con análisis inteligente.
+        </p>
+
+        <div class="portfolioTags">
+            <span>Android</span>
+            <span>Kotlin</span>
+            <span>Analytics</span>
+        </div>
+
+<a href="https://play.google.com/store/apps/details?id=com.danistorlabs.stattap&hl=es_CO"
+
+   target="_blank"
+   
+   class="button primaryButton">
+    Ver proyecto
+</a>
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section class="about" id="about">
+
+    <div class="container aboutContainer">
+
+        <div class="aboutText">
+
+            <span class="sectionSubtitle">
+                SOBRE NOSOTROS
+            </span>
+
+            <h2 class="sectionTitle">
+                Creamos tecnología que impulsa negocios reales.
+            </h2>
+
+            <p class="sectionDescription">
+                En Danistor Labs desarrollamos soluciones digitales enfocadas en resultados.
+                No solo construimos apps o páginas web, creamos herramientas que ayudan a
+                empresas a crecer, automatizar procesos y mejorar su presencia digital.
+            </p>
+
+            <p class="sectionDescription">
+                Nos especializamos en desarrollo moderno, diseño limpio y experiencias
+                optimizadas para el usuario final.
+            </p>
+
+        </div>
+
+        <div class="aboutStats">
+
+            <div class="statCard">
+                <h3>+10</h3>
+                <p>Proyectos desarrollados</p>
+            </div>
+
+            <div class="statCard">
+                <h3>100%</h3>
+                <p>Enfoque en calidad</p>
+            </div>
+
+            <div class="statCard">
+                <h3>24/7</h3>
+                <p>Soporte y mejoras</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="contact" id="contact">
+
+    <div class="container contactContainer">
+
+        <div class="contactInfo">
+
+            <span class="sectionSubtitle">
+                CONTÁCTANOS
+            </span>
+
+            <h2 class="sectionTitle">
+                Hablemos de tu proyecto.
+            </h2>
+
+            <p class="sectionDescription">
+                Cuéntanos qué necesitas y te ayudamos a convertir tu idea
+                en una solución real, moderna y escalable.
+            </p>
+
+<div class="contactDetails">
+
+    <div class="contactItem">
+        <span>📍</span>
+        <p>Bogotá, Colombia</p>
+    </div>
+
+    <div class="contactItem">
+        <span>📧</span>
+        <p>danielserrano2398@gmail.com</p>
+    </div>
+
+    <div class="contactItem">
+        <span>💼</span>
+        <p>Disponible para proyectos</p>
+    </div>
+
+</div>
+
+<div class="contactForm">
+
+    <a
+        href="https://wa.me/573152265525?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20una%20pagina%20web"
+        target="_blank"
+        class="button primaryButton">
+
+         Escríbeme por WhatsApp
+
+    </a>
+
+</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- ========================= -->
+    <!-- SCRIPTS -->
+    <!-- ========================= -->
+
+<script src="js/es.js"></script>
+
+<script src="js/en.js"></script>
+
+<script src="js/script.js"></script>
+
+
+<footer class="footer">
+
+    <div class="container footerContainer">
+
+        <!-- LOGO + DESCRIPCIÓN -->
+        <div class="footerBrand">
+
+            <img src="assets/logos/logo.png" alt="Danistor Labs">
+
+            <p>
+                Creamos soluciones digitales modernas para ayudar a
+                negocios a crecer, automatizar y destacar en el mundo digital.
+            </p>
+
+        </div>
+
+        <!-- LINKS -->
+        <div class="footerLinks">
+
+            <h4>Secciones</h4>
+
+            <a href="#apps">Apps</a>
+            <a href="#services">Servicios</a>
+            <a href="#portfolio">Portafolio</a>
+            <a href="#about">Nosotros</a>
+            <a href="#contact">Contacto</a>
+
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="footerContact">
+
+            <h4>Contacto</h4>
+
+            <p>Bogotá, Colombia</p>
+            <p>danielserrano2398@gmail.com</p>
+
+        </div>
+
+        <!-- REDES -->
+        <div class="footerSocial">
+
+            <h4>Síguenos</h4>
+
+            <div class="socialIcons">
+
+                 <a href="https://wa.me/573152265525?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20una%20pagina%20web"
+       target="_blank"
+       class="socialBtn whatsapp"
+       data-name="Escríbeme">
+
+        <span class="onlineDot"></span>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+
+    </a>
+               <a href="https://www.instagram.com/danistorlabs/"
+       target="_blank"
+       class="socialBtn instagram"
+       data-name="Síguenos">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+
+    </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footerBottom">
+        <p>© 2026 Danistor Labs. Todos los derechos reservados.</p>
+    </div>
+
+</footer>
+
+
+</body>
+
+<div class="socialFloat">
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/573152265525?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20una%20pagina%20web"
+       target="_blank"
+       class="socialBtn whatsapp"
+       data-name="Escríbeme">
+
+        <span class="onlineDot"></span>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/danistorlabs/"
+       target="_blank"
+       class="socialBtn instagram"
+       data-name="Síguenos">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+
+    </a>
+
+</div>
+</html>
+

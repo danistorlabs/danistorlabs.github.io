@@ -1,0 +1,10 @@
+.container{
+    width:min(var(--container-width),90%);
+    margin:0 auto;
+}
+
+section{
+
+    padding:120px 0;
+
+}
